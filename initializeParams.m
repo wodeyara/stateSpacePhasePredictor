@@ -1,7 +1,9 @@
 function [init_f,init_a,init_sigma,R0] = initializeParams(y0,num_component,T1,T2)
     % borrowed code from the MK model approach to initialize parameters
-    % appropriately.
-    % Last Edit: Ani Wodeyar 2/1/2020
+    % appropriately. generally not recommended, better to initialize
+    % directly and to attempt different scales for the sigma_freqs and
+    % sigma_obs
+    % Last Edit: Ani Wodeyar 9/20/2021
 
     T0 = length(y0);
     y = y0(T1:T2);
